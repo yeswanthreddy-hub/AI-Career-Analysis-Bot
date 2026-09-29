@@ -227,3 +227,116 @@ textarea:focus, input[type="text"]:focus {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 245, 212, 0.4);
 }
+
+/* Unique Main Telegram Bot Button & Animations */
+@keyframes telegramGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.45), 0 0 32px rgba(0, 245, 212, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(0, 245, 212, 0.7), 0 0 45px rgba(56, 189, 248, 0.4);
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.65;
+  }
+}
+
+.telegram-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00f5d4;
+  box-shadow: 0 0 10px #00f5d4;
+  display: inline-block;
+  animation: pulseDot 1.8s infinite ease-in-out;
+}
+
+.btn-telegram-main {
+  background: linear-gradient(135deg, #0088cc 0%, #00b4d8 45%, #00f5d4 100%);
+  color: #03131e;
+  font-weight: 800;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  padding: 10px 18px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  letter-spacing: -0.01em;
+  transition: all 0.25s ease;
+  animation: telegramGlowPulse 3s infinite ease-in-out;
+  position: relative;
+}
+
+.btn-telegram-main:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.08);
+}
+
+.btn-telegram-main.active {
+  outline: 2px solid #ffffff;
+  box-shadow: 0 0 28px rgba(0, 245, 212, 0.85);
+}
+
+.btn-telegram-hero {
+  background: linear-gradient(135deg, #0088cc 0%, #00b4d8 50%, #00f5d4 100%);
+  color: #03131e;
+  font-weight: 800;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 13px 24px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.45);
+}
+
+.btn-telegram-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 32px rgba(0, 245, 212, 0.7);
+}
+
+.instruction-step-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.22s ease;
+}
+
+.instruction-step-card:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  transform: translateX(4px);
+}
+
+.instruction-step-card.active-step-card {
+  border-color: var(--neon-cyan);
+  background: rgba(16, 30, 58, 0.9);
+  box-shadow: 0 0 24px rgba(0, 245, 212, 0.18);
+}
+
+.step-number-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1rem;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
