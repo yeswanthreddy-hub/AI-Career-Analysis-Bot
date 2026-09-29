@@ -72,37 +72,38 @@ export default function Navbar({ activeTab, setActiveTab }) {
           </button>
         </nav>
 
-        {/* Live Status & Telegram Badge */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.8rem', color: 'var(--neon-cyan)', fontFamily: 'var(--font-mono)' }}>
+        {/* Live Status & Unique Main Telegram Bot Button */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.78rem', color: 'var(--neon-cyan)', fontFamily: 'var(--font-mono)' }}>
             <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#00f5d4', boxShadow: '0 0 8px #00f5d4' }} />
             <span>ENGINE ONLINE</span>
           </div>
 
-          <a
-            href="https://t.me/ai_career_chatbot"
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              textDecoration: 'none',
-              background: 'rgba(56, 189, 248, 0.12)',
-              border: '1px solid rgba(56, 189, 248, 0.35)',
-              color: '#38bdf8',
-              padding: '6px 12px',
-              borderRadius: '8px',
-              fontSize: '0.8rem',
-              fontWeight: '600',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px'
-            }}
+          <button
+            type="button"
+            onClick={() => setActiveTab('telegram')}
+            className={`btn-telegram-main ${activeTab === 'telegram' ? 'active' : ''}`}
+            title="View Telegram Bot 4-Step Instructions & Launch Bot"
           >
-            <Send size={14} />
+            <Send size={16} strokeWidth={2.5} />
             <span>Telegram Bot</span>
-          </a>
+            <span style={{
+              background: 'rgba(3, 19, 30, 0.85)',
+              color: '#00f5d4',
+              fontSize: '0.66rem',
+              fontWeight: '800',
+              padding: '2px 7px',
+              borderRadius: '6px',
+              fontFamily: 'var(--font-mono)',
+              letterSpacing: '0.04em'
+            }}>
+              GUIDE & LAUNCH
+            </span>
+          </button>
         </div>
 
       </div>
     </header>
   );
 }
+
