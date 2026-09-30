@@ -89,22 +89,17 @@ npm run bot
 
 ---
 
-## 📱 Telegram Bot Testing Guide
+## 📱 Telegram Bot — 4-Step Usage Guide (`@ai_career_chatbot`)
 
-1. Open Telegram and search for **@BotFather**.
-2. Type `/newbot` and follow prompts to name your bot and obtain your HTTP API Token.
-3. Paste the token into `.env`:
-   ```env
-   TELEGRAM_BOT_TOKEN=123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ
-   ```
-4. Start the bot:
-   ```bash
-   npm run bot
-   ```
-5. In Telegram, search your bot username and send `/start`.
-6. Send `/setjd Senior React and Node.js Developer with AWS and Docker`.
-7. Upload your resume `.pdf`, `.docx`, or `.doc` document.
-8. Type `/compare` to compare multiple candidates!
+1. **Click the Telegram Bot**:
+   - Click the **"Telegram Bot (Guide & Launch)"** main button in the web app or open [`https://t.me/ai_career_chatbot`](https://t.me/ai_career_chatbot) directly and press **`/start`**.
+2. **How to Use?**:
+   - Use slash commands (`/start`, `/setjd`, `/jd`, `/compare`, `/clear`, `/help`) for ATS resume workflows, or type any coding, career roadmap, or interview prep question in plain English.
+3. **How to Set a JD and Resume in the Bot?**:
+   - Send `/setjd` and paste your target Job Description.
+   - Upload your resume in **`.pdf`**, **`.docx`**, or **`.doc`** format to receive a **7-Factor Weighted ATS Score (0–100%)**, Matched vs. Missing Required Skills, 5 Resume Improvements, 5 Priority Skills to Learn, and 3 Verified Courses.
+4. **How to Compare Multiple Resumes?**:
+   - Upload **2 or 3 candidate resumes** (`.pdf`, `.docx`, or `.doc`) under your active Job Description and send **`/compare`** to generate a side-by-side candidate ranking and best-hire recommendation!
 
 ---
 
